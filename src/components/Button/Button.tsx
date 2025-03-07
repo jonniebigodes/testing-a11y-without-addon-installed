@@ -18,33 +18,32 @@ const StyledButton = styled.button<{
     outline: none;
     border: 0;
     font-family: 'Hind';
+    font-size: 0.9rem;
     border-radius: ${round ? borderRadius.xl : borderRadius.xs};
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: ${withIcon ? '0.7rem' : large ? '1.125rem 1rem' : '0.875rem 1rem'};
-    color: ${clear ? color.primaryText : color.buttonText};
+    padding: ${withIcon ? '0.4rem' : large ? '0.8rem 0.6rem' : '0.5rem 0.6rem'};
+    color: ${clear ? '#999999' : '#cccccc'};
 
-    transition: box-shadow 150ms ease-in;
+    transition: all 100ms ease-in;
     z-index: 1;
-    background-color: ${clear ? color.buttonClear : color.buttonPrimary};
+    background-color: ${clear ? '#f0f0f0' : '#880044'};
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 
     &:hover {
       cursor: pointer;
-      background-color: ${clear ? color.buttonClearHover : color.buttonPrimaryHover};
-    }
-
-    &:focus {
-      box-shadow: ${boxShadow.outerBorder};
+      background-color: ${clear ? '#e8e8e8' : '#aa0055'};
     }
 
     &:disabled {
-      background-color: ${clear ? color.buttonClear : color.buttonPrimary};
+      background-color: ${clear ? '#f0f0f0' : '#880044'};
       opacity: 0.4;
     }
 
     @media ${breakpoints.M} {
-      padding: ${withIcon ? '1rem' : large ? '1.125rem 1.5rem' : '0.875rem 1.5rem'};
+      padding: ${withIcon ? '0.6rem' : large ? '0.9rem 1rem' : '0.6rem 1rem'};
     }
   `
 )
@@ -106,9 +105,7 @@ export const Button: React.FC<React.PropsWithChildren<ButtonProps>> = ({
       {...props}
       withIcon={!!icon}
     >
-      {icon && (
-        <Icon color={clear ? color.primaryText : color.buttonText} size={iconSize} name={icon} />
-      )}
+      {icon && <Icon color={clear ? '#999999' : '#cccccc'} size={iconSize} name={icon} />}
       {icon && children && <Spacer />}
       {children}
     </StyledButton>
