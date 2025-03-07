@@ -7,9 +7,8 @@ const config: StorybookConfig = {
   addons: [
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
-    '@storybook/addon-a11y',
     '@storybook/addon-coverage',
-    '@chromatic-com/storybook',
+    '@chromatic-com/storybook'
   ],
   typescript: {
     reactDocgen: 'react-docgen',

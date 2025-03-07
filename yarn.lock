@@ -2267,19 +2267,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@storybook/addon-a11y@npm:^8.6.4":
-  version: 8.6.4
-  resolution: "@storybook/addon-a11y@npm:8.6.4"
-  dependencies:
-    "@storybook/addon-highlight": "npm:8.6.4"
-    "@storybook/test": "npm:8.6.4"
-    axe-core: "npm:^4.2.0"
-  peerDependencies:
-    storybook: ^8.6.4
-  checksum: 10c0/949e060bae079175e002f52cf2f59b788549f866ab2635f6c121d75a3515a8c8faf1b019627edddad664ae1308c96e11a3786e4fe41d6d687523f335ab770362
-  languageName: node
-  linkType: hard
-
 "@storybook/addon-actions@npm:8.6.2":
   version: 8.6.2
   resolution: "@storybook/addon-actions@npm:8.6.2"
@@ -4268,7 +4255,6 @@ __metadata:
     "@chromatic-com/storybook": "npm:^3.2.4"
     "@playwright/test": "npm:^1.50.1"
     "@reduxjs/toolkit": "npm:^2.2.3"
-    "@storybook/addon-a11y": "npm:^8.6.4"
     "@storybook/addon-coverage": "npm:^1.0.5"
     "@storybook/addon-essentials": "npm:^8.6.4"
     "@storybook/addon-interactions": "npm:^8.6.4"
@@ -4784,7 +4770,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axe-core@npm:^4.10.0, axe-core@npm:^4.2.0, axe-core@npm:^4.4.2":
+"axe-core@npm:^4.10.0, axe-core@npm:^4.4.2":
   version: 4.10.2
   resolution: "axe-core@npm:4.10.2"
   checksum: 10c0/0e20169077de96946a547fce0df39d9aeebe0077f9d3eeff4896518b96fde857f80b98f0d4279274a7178791744dd5a54bb4f322de45b4f561ffa2586ff9a09d
