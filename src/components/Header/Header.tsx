@@ -27,7 +27,8 @@ export const HeaderContainer = styled.div<{ sticky: boolean }>(
     top: 0;
     left: 0;
     position: sticky;
-    background: ${color.headerBackground};
+    background: #f2f2f2; /* Light gray background */
+    color: #d9d9d9; /* Very light gray text, creating poor contrast */
     z-index: 2;
     width: 100%;
     padding: 0 1.5rem;
