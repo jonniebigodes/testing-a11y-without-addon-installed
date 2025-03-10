@@ -23,15 +23,20 @@ const StyledButton = styled.button<{
     align-items: center;
     justify-content: center;
     padding: ${withIcon ? '0.7rem' : large ? '1.125rem 1rem' : '0.875rem 1rem'};
-    color: ${clear ? color.primaryText : color.buttonText};
+
+    /* Poor contrast colors for accessibility issues */
+    color: ${clear ? '#767676' : '#CCCCCC'}; /* Light gray text */
 
     transition: box-shadow 150ms ease-in;
     z-index: 1;
-    background-color: ${clear ? color.buttonClear : color.buttonPrimary};
+    /* Low contrast background colors */
+    background-color: ${clear
+      ? '#F5F5F5'
+      : '#919191'}; /* Light backgrounds with poor contrast to text */
 
     &:hover {
       cursor: pointer;
-      background-color: ${clear ? color.buttonClearHover : color.buttonPrimaryHover};
+      background-color: ${clear ? '#EFEFEF' : '#8A8A8A'};
     }
 
     &:focus {
@@ -39,7 +44,7 @@ const StyledButton = styled.button<{
     }
 
     &:disabled {
-      background-color: ${clear ? color.buttonClear : color.buttonPrimary};
+      background-color: ${clear ? '#F5F5F5' : '#919191'};
       opacity: 0.4;
     }
 
