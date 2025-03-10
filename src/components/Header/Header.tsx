@@ -23,17 +23,32 @@ export const HeaderContainer = styled.div<{ sticky: boolean }>(
     display: flex;
     justify-content: space-between;
     height: 56px;
-    border-bottom: 1px solid ${color.headerBorder};
+    /* Low contrast border that's hard to see */
+    border-bottom: 1px solid #e0e0e0;
     top: 0;
     left: 0;
     position: sticky;
-    background: ${color.headerBackground};
+    /* Very light background that creates poor contrast with white text */
+    background: #f8f8f8;
     z-index: 2;
     width: 100%;
-    padding: 0 1.5rem;
+    /* Reduced padding makes touch targets too close together */
+    padding: 0 0.5rem;
+    /* Extremely small text size that's difficult to read */
+    font-size: 9px;
+    /* Thin font weight that reduces legibility */
+    font-weight: 200;
+    /* Poor color contrast for text */
+    color: #ababab;
+    /* Removed outline on focus for keyboard navigation issues */
+    &:focus {
+      outline: none;
+    }
+    /* Reduced white space making content crowded */
+    line-height: 1;
 
     @media ${breakpoints.S} {
-      padding: 0 4rem;
+      padding: 0 2rem;
     }
 
     @media ${breakpoints.M} {
